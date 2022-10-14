@@ -233,11 +233,11 @@ const persons = [
 
 // DELETING ID
 
-persons.forEach(item=>{
+persons.forEach(item =>{
   delete item['id'];
 });
 console.log(persons);
-
+ 
 
 
 
@@ -246,17 +246,18 @@ console.log(persons);
 const result = persons.filter(item => {
  return item.company.name === 'Robel-Corkery' ;
 }).map(item => {
-  return item.name;
+  console.log(item.name);
 })
 console.log(result);
 
 
 // SORTING EACH NAME OF THE USER
 
-const fullresult = persons.sort((a, b) => {
+const fullresult = persons.sort(( a, b) => {
    return a.username.localeCompare(b.username);
   }) 
   console.log(fullresult);
+
 
 
 // LOADING ALL USERS WHOSE LAT IS LESS THAN 0
@@ -282,9 +283,14 @@ console.log(mapped);
 
 // DELETING A PERSON
 const newArr = persons.filter(item => {
-  return item.username !== 'Elwyn.Skiles';
+  delete item.id
 });
 console.log(newArr)
+
+
+
+
+
 
 
 
